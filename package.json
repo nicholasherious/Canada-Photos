@@ -1,5 +1,5 @@
 {
-  "name": "Photo-Tweeter",
+  "name": "Canada Photos",
   "version": "1.0.0",
   "description": "Automatically tweet random images from Unsplash to Twitter",
   "main": "index.js",
