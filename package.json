@@ -1,9 +1,6 @@
 {
   "name": "Canada Photos",
   "version": "1.0.0",
-  "engines": {
-    "node": "16.16.1"
-  },
   "description": "Automatically tweet random images from Unsplash to Twitter",
   "main": "index.js",
   "type": "module",
