@@ -1,18 +1,14 @@
-
-import express from 'express'
+import express from 'express';
 const app = express();
-const port = 3000;
+const PORT = process.env.port || 3000;
 
-import { getPhoto } from './services/unsplash.js'
-
-
-
+import { getPhoto } from './services/unsplash.js';
 
 // getPhoto()
 // postTweet()
 
-setInterval(getPhoto, 5*60*60*1000)
+setInterval(getPhoto, 5 * 60 * 60 * 1000);
 
-app.listen(port, () => {
-  console.log(`Canada Photos listening on port ${port}`);
+app.listen(PORT, () => {
+  console.log(`Canada Photos listening on port ${PORT}`);
 });
