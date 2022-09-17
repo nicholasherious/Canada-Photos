@@ -1,0 +1,24 @@
+{
+  "name": "Photo-Tweeter",
+  "version": "1.0.0",
+  "description": "Automatically tweet random images from Unsplash to Twitter",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "Nicholas Herious",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "dotenv": "^16.0.2",
+    "express": "^4.18.1",
+    "node-fetch": "^3.2.10",
+    "nodemon": "^2.0.19",
+    "twitter": "^1.7.1",
+    "twitter-api-v2": "^1.12.7",
+    "unsplash-js": "^7.0.15"
+  }
+}
