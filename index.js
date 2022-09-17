@@ -1,6 +1,6 @@
 import express from 'express';
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || PORT;
 
 import { getPhoto } from './services/unsplash.js';
 
@@ -9,10 +9,10 @@ import { getPhoto } from './services/unsplash.js';
 
 setInterval(getPhoto, 5 * 60 * 60 * 1000);
 
-app.get('/', req, res => {
+app.get('/', (req, res) => {
   res.send('What are you doing?');
 });
 
-app.listen(process.env.PORT || PORT, () => {
+app.listen(PORT, () => {
   console.log(`Canada Photos is Running`);
 });
