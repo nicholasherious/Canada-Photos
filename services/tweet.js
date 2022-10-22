@@ -24,7 +24,7 @@ export const postTweet = async (userInfo, buffer) => {
       tweetTitle = userInfo.user.location;
     }
 
-    if (tweeTitle === undefined) {
+    if (tweetTitle === undefined) {
       tweetTitle = 'Canada is Amazing!';
     }
 
