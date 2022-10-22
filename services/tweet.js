@@ -14,7 +14,7 @@ export const postTweet = async (userInfo, buffer) => {
       client.v1.uploadMedia(buffer, { mimeType: EUploadMimeType.Jpeg }),
     ]);
 
-    let tweetTitle = userInfo.description;
+    let tweetTitle = userInfo?.description;
 
     if (tweetTitle === null) {
       tweetTitle = userInfo.location.title;
