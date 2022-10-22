@@ -1,5 +1,5 @@
 import { TwitterApi, EUploadMimeType } from 'twitter-api-v2';
-import { truncate } from 'lodash'
+import  truncate  from 'lodash/truncate.js'
 import { config } from '../environment.js';
 
 const client = new TwitterApi({
