@@ -26,7 +26,7 @@ export const postTweet = async (userInfo, buffer) => {
 
     console.log(mediaIds);
     const { data: createdTweet } = await client.v2.tweet(
-      `${tweetTitle} | credit: ${userInfo.user.name}`,
+      `${tweetTitle} | credit: ${userInfo.user.name} #photography #canada #photos #nature`,
       { media: { media_ids: mediaIds } }
     );
     console.log('Tweet', createdTweet.id, ':', createdTweet.text);
