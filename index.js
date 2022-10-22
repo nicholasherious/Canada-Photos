@@ -7,12 +7,12 @@ import { getPhoto } from './services/unsplash.js';
 // getPhoto()
 // postTweet()
 
-// const timer = () => {
-//   getPhoto();
-//   setTimeout(timer, 5 * 60 * 60 * 1000);
-// };
+const timer = () => {
+  getPhoto();
+  setTimeout(timer, 5 * 60 * 60 * 1000);
+};
 
-// timer();
+timer();
 
 app.get('/', (req, res) => {
   res.send('What are you doing here?');
