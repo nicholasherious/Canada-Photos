@@ -1,5 +1,5 @@
 import { TwitterApi, EUploadMimeType } from 'twitter-api-v2';
-import { config } from '../environment.js'
+import { config } from '../environment.js';
 
 const client = new TwitterApi({
   appKey: config.appKey,
@@ -22,6 +22,10 @@ export const postTweet = async (userInfo, buffer) => {
 
     if (tweetTitle === null) {
       tweetTitle = userInfo.user.location;
+    }
+
+    if (tweeTitle === undefined) {
+      tweetTitle = 'Canada is Amazing!';
     }
 
     console.log(mediaIds);
