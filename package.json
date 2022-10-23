@@ -22,5 +22,8 @@
     "twitter": "^1.7.1",
     "twitter-api-v2": "^1.12.7",
     "unsplash-js": "^7.0.15"
+  },
+  "devDependencies": {
+    "jest": "^29.2.1"
   }
 }
