@@ -27,6 +27,12 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
+        env:
+          APP_KEY: ${{ secrets.APP_KEY }}
+          APP_SECRET: ${{ secrets.APP_SECRET }}
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          ACCESS_SECRET: ${{ secrets.ACCESS_SECRET }}
+          UNSPLASH_KEY: ${{ secrets.UNSPLASH_KEY }}
       - run: npm ci
       - run: npm run build --if-present
       - run: npm test
