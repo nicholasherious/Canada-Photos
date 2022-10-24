@@ -20,7 +20,7 @@ export const getPhoto = async () => {
 
     // makeTweet(userInfo, buffer)
     makeTweet(userInfo, buffer);
-    console.log(userInfo);
+    // console.log(userInfo);
   } catch (error) {
     console.log('Rate exceeded on Unsplash', error);
   }
