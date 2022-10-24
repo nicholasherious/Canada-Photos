@@ -10,7 +10,7 @@ const client = new TwitterApi({
   accessSecret: config.accessSecret,
 });
 
-const postTweet = async (tweetInfo, buffer) => {
+export const postTweet = async (tweetInfo, buffer) => {
   // Upload images to Twitter
 
   try {
@@ -77,5 +77,12 @@ export const makeTweet = async (userInfo, buffer) => {
     photoDescription,
     credit,
   };
-  postTweet(tweetInfo, buffer);
+
+  if (buffer) {
+    postTweet(tweetInfo, buffer);
+  }
+ 
+  return tweetInfo
+  
+  
 };
