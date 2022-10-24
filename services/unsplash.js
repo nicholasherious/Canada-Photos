@@ -1,7 +1,7 @@
 import { createApi } from 'unsplash-js';
 import nodeFetch from 'node-fetch';
 import axios from 'axios';
-import { postTweet } from './tweet.js';
+import { makeTweet } from './tweet.js';
 
 import { config } from '../environment.js';
 
@@ -18,9 +18,9 @@ export const getPhoto = async () => {
     const buffer = Buffer.from(response.data, 'base64');
     const userInfo = randomPhoto.response;
 
-    postTweet(userInfo, buffer)
-   
-    // console.log(randomPhoto)
+    // makeTweet(userInfo, buffer)
+    makeTweet(userInfo, buffer);
+    console.log(userInfo);
   } catch (error) {
     console.log('Rate exceeded on Unsplash', error);
   }
