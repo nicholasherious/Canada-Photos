@@ -1,6 +1,8 @@
 import { TwitterApi, EUploadMimeType } from 'twitter-api-v2';
-import  truncate  from 'lodash/truncate.js'
+import truncate from 'lodash/truncate.js';
 import { config } from '../environment.js';
+
+
 
 const client = new TwitterApi({
   appKey: config.appKey,
@@ -15,10 +17,9 @@ export const postTweet = async (userInfo, buffer) => {
       client.v1.uploadMedia(buffer, { mimeType: EUploadMimeType.Jpeg }),
     ]);
 
-    const title = userInfo?.description
+    const title = userInfo?.description;
 
-    let tweetTitle = truncate(title, {'length': 100, 'separator': ' '})
-
+    let tweetTitle = truncate(title, { length: 100, separator: ' ' });
 
     if (tweetTitle === null) {
       tweetTitle = userInfo.location.title;
@@ -32,12 +33,13 @@ export const postTweet = async (userInfo, buffer) => {
       tweetTitle = 'Canada is Amazing!';
     }
 
-    console.log(mediaIds);
+   
     const { data: createdTweet } = await client.v2.tweet(
       `${tweetTitle} | credit: ${userInfo.user.name} #photography`,
       { media: { media_ids: mediaIds } }
     );
     console.log('Tweet', createdTweet.id, ':', createdTweet.text);
+    return createdTweet;
   } catch (error) {
     console.log(error);
   }
