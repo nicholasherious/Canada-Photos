@@ -4,17 +4,20 @@ const PORT = process.env.PORT || 4000;
 
 import { getPhoto } from './services/unsplash.js';
 
-// getPhoto()
-// postTweet()
+const delay = 5 * 60 * 60 * 1000; // 5 Hours
 
 const timer = () => {
   getPhoto();
-  setTimeout(timer, 5 * 60 * 60 * 1000);
+  setTimeout(timer, delay);
 };
 
 timer();
 
 app.get('/', (req, res) => {
+  res.send('Server is running');
+});
+
+app.get('/time', (req, res) => {
   res.send('What are you doing here?');
 });
 
