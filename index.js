@@ -1,6 +1,6 @@
 import express from 'express';
 const app = express();
-const PORT = process.env.PORT || PORT;
+const PORT = process.env.PORT || 4000;
 
 import { getPhoto } from './services/unsplash.js';
 

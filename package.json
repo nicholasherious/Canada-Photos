@@ -1,26 +1,35 @@
 {
   "name": "canada-photos",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Automatically tweet random images from Unsplash to Twitter",
   "main": "index.js",
   "type": "module",
   "scripts": {
     "start": "node index.js",
-    "dev": "nodemon index.js"
+    "dev": "nodemon index.js",
+    "test": "node --experimental-vm-modules ./node_modules/.bin/jest"
   },
-  "keywords": [],
+  "keywords": [
+    "twitter",
+    "unsplash",
+    "nodejs",
+    "javascript",
+    "canada"
+  ],
   "author": "Nicholas Herious",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.27.2",
+    "axios": "^1.1.3",
     "dotenv": "^16.0.2",
     "express": "^4.18.1",
     "lodash": "^4.17.21",
     "lodash.truncate": "^4.4.2",
     "node-fetch": "^3.2.10",
     "nodemon": "^2.0.19",
-    "twitter": "^1.7.1",
     "twitter-api-v2": "^1.12.7",
     "unsplash-js": "^7.0.15"
+  },
+  "devDependencies": {
+    "jest": "^29.2.1"
   }
 }
