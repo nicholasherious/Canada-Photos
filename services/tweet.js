@@ -27,7 +27,7 @@ export const postTweet = async (tweetInfo, buffer) => {
           : ''
       } #photography ${
         tweetInfo?.location?.city ? `#${tweetInfo?.location?.city}` : ''
-      } #canada`,
+      } #canada `,
       { media: { media_ids: mediaIds } }
     );
     console.log('Tweet', createdTweet.id, ':', createdTweet.text);
@@ -53,7 +53,7 @@ export const makeTweet = async (userInfo, buffer) => {
   const location = {
     name: lowerCase(userInfo?.location?.name),
     country: lowerCase(userInfo?.location?.country),
-    city: lowerCase(userInfo?.location?.city),
+    city: lowerCase(userInfo?.location?.city).replace(/\s/g, ''),
   };
 
   let tweetTitle = truncate(photoDescription?.description, {
